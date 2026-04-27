@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unfiltered AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon">◈</span>
+        <div>
+          <div class="brand-name">UNFILTERED</div>
+          <div class="brand-sub">AI · MIRROR MODE</div>
+        </div>
+      </div>
+
+      <div class="sidebar-tagline">
+        No sugarcoating.<br/>No fake validation.<br/>Just the truth.
+      </div>
+
+      <button class="new-chat-btn" id="newChatBtn">
+        + New Session
+      </button>
+
+      <div class="session-info" id="sessionInfo">
+        <div class="session-label">ACTIVE SESSION</div>
+        <div class="session-id" id="sessionIdDisplay">—</div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="warning-box">
+          ⚠ This AI will not tell you what you want to hear.
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main chat area -->
+    <main class="main">
+
+      <div class="chat-header">
+        <div class="header-left">
+          <span class="status-dot" id="statusDot"></span>
+          <span class="status-text" id="statusText">Starting session...</span>
+        </div>
+        <div class="header-right">
+          <span class="model-tag">GROK · UNFILTERED</span>
+        </div>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-icon">◈</div>
+          <h1 class="welcome-title">THE MIRROR IS READY</h1>
+          <p class="welcome-desc">
+            Ask anything. Get the unfiltered truth.<br/>
+            Career. Relationships. Finance. Health. Life decisions.
+          </p>
+          <div class="example-prompts">
+            <div class="example" onclick="fillPrompt(this)">Is my startup idea actually good?</div>
+            <div class="example" onclick="fillPrompt(this)">Why am I not getting better at coding?</div>
+            <div class="example" onclick="fillPrompt(this)">I keep failing at my goals. What's wrong?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="userInput"
+            placeholder="Ask the mirror something real..."
+            rows="1"
+          ></textarea>
+          <button id="sendBtn" onclick="sendMessage()">
+            <span id="sendIcon">→</span>
+          </button>
+        </div>
+        <div class="input-hint">Press Enter to send · Shift+Enter for new line</div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
