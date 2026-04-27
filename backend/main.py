@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import os
 import uuid
 
-from database import engine, get_db, Base
+from backend.database import engine, get_db, Base
 import models
 import schemas
 
