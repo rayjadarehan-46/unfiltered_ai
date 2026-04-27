@@ -8,7 +8,7 @@ import uuid
 
 from backend.database import engine, get_db, Base
 from backend import models
-import schemas
+from backend import schemas
 
 load_dotenv()
 
